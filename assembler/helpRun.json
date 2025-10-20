@@ -1,0 +1,27 @@
+{
+  "BootloaderASM_Ring0": {
+    "description": "ASM bootloader pur, Ring 0, pas d'OS",
+    "file": "boot.asm",
+    "assemble": "nasm -f bin boot.asm -o boot.bin",
+    "run": "qemu-system-i386 -fda boot.bin",
+    "notes": "Affiche du texte directement via BIOS, full Ring 0"
+  },
+  "ASM_OS_Ring0": {
+    "description": "ASM qui tourne sous OS (ex: Linux) via kernel module",
+    "file": "module.c",
+    "compile": "make  # avec Makefile adapté pour kernel module",
+    "load": "sudo insmod module.ko",
+    "check": "dmesg | tail  # voir le message dans le kernel log",
+    "remove": "sudo rmmod module",
+    "notes": "Ton code ASM s'exécute en Ring 0 via le module Linux"
+  },
+  "ASM_Cpp_OS": {
+    "description": "ASM + C++ sous OS",
+    "file": "main.cpp",
+    "compile": "g++ main.cpp -o main.exe",
+    "run_linux": "./main.exe",
+    "run_windows": "main.exe",
+    "notes": "Ton code tourne sur Ring 3 si c'est une application normale, ou Ring 0 si c'est un module/driver"
+  }
+}
+
