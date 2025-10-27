@@ -1,0 +1,16 @@
+/* Reset et styles globaux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #111; /* fond sombre global */
+  color: #00ff00;         /* texte vert global */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
