@@ -29,14 +29,12 @@ function App() {
         return data;
       })
       .then((data) => {
-        if (data.success) {
-          setResponseMsg("Welcome");
-        } else if (data.passwordStrong === false) {
+        if (data.passwordStrong === false) {
           setResponseMsg(data.message);
         } else if (data.mailValide === false) {
           setResponseMsg(data.message);
-        } else {
-          setResponseMsg("⚠️ Unexpected response.");
+        }else {
+          setResponseMsg("Welcome");
         }
       })
       .catch((e) => {
