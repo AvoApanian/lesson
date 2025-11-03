@@ -1,0 +1,27 @@
+button {
+  padding: 12px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  white-space: pre-line; /* pour que \n soit pris en compte */
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #5454ff;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
