@@ -6,7 +6,7 @@ button {
   font-weight: bold;
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
-  white-space: pre-line; /* pour que \n soit pris en compte */
+  white-space: pre-line; 
 }
 
 button:hover {
