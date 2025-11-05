@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e8faff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.title {
+  color: #0077ff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
